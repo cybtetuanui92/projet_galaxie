@@ -1,24 +1,24 @@
-console.log('assets/js/home.js chargé ✅');
-console.log('Tableau des destinations : ', destinations);
-console.log('Tableau des membres de l\'équipe : ', team);
+// console.log('assets/js/home.js chargé ✅');
+// console.log('Tableau des destinations : ', destinations);
+// console.log('Tableau des membres de l\'équipe : ', team);
 
 // TODO: Affichage des destinations dans la section #destinations de la page d'accueil
 // Appel de la fonction getDestinations
-// getDestinations(destinations);
+ getDestinations(destinations);
 
 // Affichage des membres de l'équipe dans la section #about de la page d'accueil
 // Appel de la fonction getTeam
 getTeam(team);
 
 // Animation des scroll vers les différentes sections de la page d'accueil
-ScrollReveal().reveal('#home');
+ScrollReveal().reveal('#home', { delay: 300 });
 ScrollReveal().reveal('#about', { delay: 300 });
 ScrollReveal().reveal('#destinations', { delay: 500 });
 ScrollReveal().reveal('#contact', { delay: 700 });
 
 // Gestion du scroll vers le haut de la page
 window.scrollTo({
-    top: 0,
+    top: 0, 
     behavior: 'smooth'
 });
 

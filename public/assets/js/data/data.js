@@ -1,12 +1,12 @@
 // Fichier de données
-console.log('data/data.js chargé ✅');
+ //console.log('data/data.js chargé ✅');
 
 // On rassemble les données dans un tableau pour les utiliser dans plusieurs fichiers et dynamiser le site
 // Les données sont stockées dans des variables en constante pour éviter qu'elles soient modifiées par erreur
 // Il est toujours possible d'ajuster leur contenu si besoin, en modifiant directement ce fichier
 
 // La liste des destinations proposées par l'agence (Page "Destinations" & "Accueil" section "#destinations") :
-const destinations = [
+const destinations = [ 
     {
         id : 1, name : 'Nébuleuse de l\'Aurore', location : 'Localisation : Au cœur de la galaxie, cette nébuleuse offre un spectacle visuel époustouflant avec des lumières chatoyantes et des formations nuageuses éblouissantes. Un voyage parfait pour les amateurs de photographie stellaire.', img : 'assets/images/destinations/nebuleuse.jpeg'
     },
@@ -26,7 +26,7 @@ const destinations = [
         id : 6, name : 'Trou de Ver de Luminara, Le Portail Cosmique', location : 'Localisation : Un trou de ver rare qui offre un passage vers des régions inexplorées de l\'univers. Les voyageurs peuvent traverser ce portail cosmique pour atteindre des constellations lointaines et des galaxies peu connues.', img : 'assets/images/destinations/ver.jpeg'
     }
 ];
-
+    
 // La liste des membres de l'équipe de l'agence (Page d'accueil, section "#about") :
 const team = [
     {
@@ -45,3 +45,4 @@ const team = [
         id : 5, name : 'Groot', job : 'Expert en navigation stellaire', img : 'assets/images/team/groot.png'
     }
 ];
+

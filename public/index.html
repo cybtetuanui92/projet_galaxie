@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
+<head> 
+
     <meta charset="UTF-8">
     <!-- Adaptabilité écrans -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,8 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <!-- Titre du site -->
     <title>Space Tour</title>
-</head>
+   
+</head> 
 
 <body>
     <header>
@@ -24,7 +26,7 @@
             </a>
             <!-- Menu de Navigation Desktop (Invisible en vue Mobile) -->
             <ul id="nav-desktop">
-                <li><a href="#home" class="nav-link active-link">Accueil</a></li>
+                <li><a href="../public/index.html" class="nav-link active-link">Accueil</a></li>
                 <li><a href="#about" class="nav-link">À propos</a></li>
                 <li><a href="#destinations" class="nav-link">Destinations</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -42,7 +44,7 @@
             <!-- Fin du Navigation Mobile -->
         </nav>
         <!-- Fin de la Barre de Navigation -->
-    </header>
+     </header>
 
     <!-- Début du Main -->
     <main class="home-main">
@@ -56,7 +58,7 @@
     </main>
     <!-- Fin du Main -->
 
-    <!-- Début section #about -->
+    <!-- Début section #about ##COMMENCE MAGIE DU CODE##  -->
     <section id="about">
         <h2>À propos de nous 🧑‍🚀</h2>
         <!-- Présentation de l'équipe Dynamique -->
@@ -162,20 +164,25 @@
     <footer>
         <p>&copy; 2023 Agence de Voyages Fantastiques</p>
     </footer>
-    <!-- Fin du Footer -->
+<!-- Fin du Footer -->
+
 
     <!-- Dépendance Librairie Externes JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- Dépendance Librairie JS SMTP pour l'envoie de mail -->
+
+    <!-- Dépendance Librairie JS SMTP pour l'envoi de mail -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+    <!-- Dépendance Locale de données Javascript pour la page d'accueil -->
+    <script src="assets/js/data/data.js"></script>
 
     <!-- Dépendance Locale pour l'envoie de mail -->
     <script src="assets/js/services/mailer-service.js"></script>
     <script src="assets/js/services/destinations-service.js"></script>
     <script src="assets/js/services/team-service.js"></script>
 
-    <!-- Dépendance Locale de données Javascript pour la page d'accueil -->
-    <script src="assets/js/data/data.js"></script>
+    
 
     <!-- Dépendance Locale JS pour la page d'accueil -->
     <!-- Script Javascript permettant de gérer le menu burger & l'affichage de la home -->
@@ -186,3 +193,4 @@
 </body>
 
 </html>
+

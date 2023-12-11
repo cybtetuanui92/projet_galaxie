@@ -84,10 +84,15 @@
 }
 
 #about-team {
-    /* TODO: Se réferer aux Maquettes */
+    /* TODO: Se réferer aux Maquettes EXECUTED */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
 }
 
 .card-team {
+    color: white; 
     width: 300px;
     height: 300px;
     display: flex;
@@ -106,15 +111,35 @@
 .card-team-avatar {
     /* code provisoire 
      intégrer les images de profil des membres de l'équipe */
+        
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 150px;
     background-color: grey;
     border-radius: 50%;
+    overflow: hidden ;
+    
+
 }
+
+/* .card-team-avatar img {
+    width: 100%; /* Remplit la largeur du conteneur 
+    height: 100%; /* Remplit la hauteur du conteneur 
+    object-fit: cover; /* Ajuste la taille de l'image pour remplir le conteneur sans déformation 
+} */
+
+
+
 
 /* Destinations Section */
 #list-destination {
     /* TODO: Se référer aux Maquettes */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #destinations {
@@ -140,7 +165,7 @@
     box-shadow: 0 0 5px #bbb9b9;
 }
 
-.destination h3 {
+.destination h3, a {
     font-size: 1.2em;
     margin: 0;
     padding: 10px;

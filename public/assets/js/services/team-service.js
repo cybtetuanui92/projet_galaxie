@@ -1,4 +1,4 @@
-console.log('assets/js/services/team-service.js chargé ✅');
+//  console.log('assets/js/services/team-service.js chargé ✅');
 
 /**
  * Affichage des membres de l'équipe dans la page d'accueil
@@ -8,9 +8,9 @@ function getTeam(team) {
     // Création d'une boucle pour afficher les membres de l'équipe dans la page à partir du tableau team
     for (let i = 0; i < team.length; i++) {
         // Debug
-        console.log(team[i].name);
-        console.log(team[i].job);
-        console.log(team[i].img);
+        // console.log(team[i].name);
+        // console.log(team[i].job);
+        // console.log(team[i].img);
     
         // Création d'un élément HTML pour chaque membre de l'équipe
         let teamContainer = document.createElement('div');
@@ -19,7 +19,10 @@ function getTeam(team) {
         // Ajout du contenu HTML dans chaque élément HTML créé avec le contenu du tableau team
         teamContainer.innerHTML = `
             <div class="card-team">
-                <div class="card-team-avatar"></div>
+                <div class="card-team-avatar">
+                    <img src="${team[i].img}" alt="${team[i].name}" width="150" height="150" >
+
+                </div>
                 <div class="card-team-content">
                     <h3>${team[i].name}</h3>
                     <p>${team[i].job}</p>

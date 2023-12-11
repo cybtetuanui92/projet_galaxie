@@ -1,6 +1,6 @@
-console.log('assets/js/destinations-service.js chargé ✅');
+// console.log('assets/js/destinations-service.js chargé ✅');
 
-/**
+/** 
  * Affichage des informations de la destination dans la page destinations.html
  * @param {Array} destinations
  * @param {Number} destinationId
@@ -8,7 +8,8 @@ console.log('assets/js/destinations-service.js chargé ✅');
  * Affiche les informations de la destination dans la page destinations.html ou 
  * redirige vers une page d'erreur 404 si l'id de la destination n'existe pas
  */
-function getDestination(destinations, destinationId) {
+
+// function getDestination(destinations, destinationId) {
     // TODO:
     // Initialisation des variables result et error
     // Boucle sur le tableau des destinations pour trouver la destination correspondante à l'id
@@ -29,24 +30,74 @@ function getDestination(destinations, destinationId) {
         // Affichage du nom de la destination dans le titre de la page
         // Affichage du contenu supplémentaire de la destination dans la page
     // Debug du résultat de la recherche si la destination existe
+// }
+
+
+
+function getDestination(destinations, destinationId) {
+    let result = '';
+    let error ='' ;
+     for (let i=0; i<destinations.length; i++) {
+        let idPicked = destinations[i].id
+     if (idPicked === destinationId) {
+             result = destinations[i];
+             console.log(result)
+        }  else { 
+            error = 404
+            
+        }
+     }
+     if(result === ''){
+
+        window.location.href = "error.html?error=" + error
+        }  
+    else {
+        let title = document.getElementById('destination-name');
+        let content = document.getElementById('destination-location');
+
+        title.innerHTML = result.name;
+        content.innerHTML = result.location;
+    }
+     
 }
 
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
 /**
  * Affichage des destinations dans la page d'accueil
  * @param {Array} destinations 
  */
-function getDestinations(destinations) {
+ function getDestinations(destinations) {
     // TODO:
     // Initialisation de la variable linkToDestination pour créer un lien vers la page destinations.html
     // Elle contient le début du lien vers la page destinations.html et doit être concaténée avec l'id de la destination
-    let linkToDestination = "destinations.html?destination=";
+    
+    
     // Création d'une boucle pour afficher les destinations dans la page à partir du tableau destinations
     // et de la constante destinationContainer
     for (let i = 0; i < destinations.length; i++) {
-        // Debug
-        console.log(destinations[i].name);
-        console.log(destinations[i].location);
-        console.log(destinations[i].id);
+        let linkToDestination = "destinations.html?destination=" + destinations[i].id;
+        const destinationContainer = document.createElement('div');
+        destinationContainer.classList.add('destination');
+        destinationContainer.innerHTML = `
+            <div class="destination">
+                <img src="${destinations[i].img}" alt="${destinations[i].name}" width="150" height="150">
+                <h3>${destinations[i].name}</h3>
+                <hr>
+                <p>${destinations[i].location}</p>
+                <a href="destinations.html?destination=1">En savoir plus</a>
+            </div>
+        `;
+        
+        // document.getElementById('list-destination').appendChild(destinationContainer);
+        // console.log(displayDest);
+    }}
+           // Debug///////////////////////////////////////
+        // console.log(destinations[i].name);
+        // console.log(destinations[i].location);
+        // console.log(destinations[i].id);
         // Création d'un élément HTML avec la classe destination
         // et stockage dans la variable destinationContainer
         // Indice : document.createElement('div');
@@ -54,5 +105,5 @@ function getDestinations(destinations) {
         // Indice : destinationContainer.innerHTML = `...`;
         // Ajout de destinationContainer dans la page HTML
         // Indice : document.getElementById('list-destination').appendChild(destinationContainer);
-    }
-}
+    
+
